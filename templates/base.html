@@ -4,6 +4,10 @@
   <body>
     {% block content %}
     {% endblock %}
+    {% if not DEBUG %}
+        {% render_bundle 'manifest' 'js' %}
+        {% render_bundle 'vendor' 'js' %}
+    {% endif %}
     {% render_bundle 'app' %}
   </body>
 </html>
