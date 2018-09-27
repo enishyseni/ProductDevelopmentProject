@@ -4,7 +4,7 @@
 
 This solution comes from an experienced software engineer who had zero experience with insurances before, and since python and VueJS framework are not my primary technology stack, it took me a bit more time to get familiar with this stack, either way it wasn't that hard because software engineering principles are very similar in modern technology stacks.
 
-###The idea
+### The idea
 
 I have read and asked a bit about how insurance companies work, and a bit of personal experience with medical insurance, i came with a proposal that i thought might cover "all" the cases in insurance business model.
 
