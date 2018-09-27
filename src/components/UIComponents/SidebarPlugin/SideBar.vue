@@ -9,9 +9,9 @@
       <div class="logo">
         <a href="#" class="simple-text">
             <div class="logo-img">
-                <img src="static/img/vue-logo.png" alt="">
+                <img src="static/logo.png" alt="">
             </div>
-          Paper Dashboard
+          <!--BriteCore-->
         </a>
       </div>
       <slot>

@@ -4,11 +4,8 @@ import NotFound from '../components/GeneralViews/NotFoundPage.vue'
 
 // Admin pages
 import UserProfile from '../components/Britecore/Views/UserProfile.vue'
-import Overview from '../components/Britecore/Views/Contracts/Contracts/MyContractsList.vue'
 import Partners from '../components/Britecore/Views/Partners/Partners/PartnersList.vue'
-import Icons from '../components/Britecore/Views/Icons.vue'
-import Maps from '../components/Britecore/Views/Maps.vue'
-import Typography from '../components/Britecore/Views/Typography.vue'
+import Contracts from '../components/Britecore/Views/Contracts/Contracts/MyContractsList.vue'
 
 const routes = [
   {
@@ -25,21 +22,16 @@ const routes = [
         path: 'stats',
         name: 'stats',
         component: UserProfile
-      },     
+      },  
+      {
+        path: 'contracts',
+        name: 'contracts',
+        component: Contracts
+      },   
       {
         path: 'partners',
         name: 'partners',
         component: Partners
-      },
-      {
-        path: 'maps',
-        name: 'maps',
-        component: Maps
-      },
-      {
-        path: 'typography',
-        name: 'typography',
-        component: Typography
       }
     ]
   },
