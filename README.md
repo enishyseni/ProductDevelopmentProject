@@ -13,44 +13,43 @@ I have read and asked a bit about how insurance companies work, and a bit of per
 I started with a simplified process flow in my mind, meaning the first thing you encounter with insurance company is identification, to whom i might be an organisation or individual which therefore i called it Partner in the solution.
 
 #### Partner: 
-It's where we save basic data about the client/partner.
+###### It's where we save basic data about the client/partner.
 
 #### PartnerType: 
-Two categories that i already mentioned for Partner type are organisational or individual.
+###### Two categories that i already mentioned for Partner type are organisational or individual.
 
 #### PartnerMember: 
-As the name implies, if partner is of type organizational then it may have many member or staff and those staff members might be treated differently when it comes to entities/assets they are insuring.
-Contract: to make an agreement with Partners(our clients) we use contracts as a wrapper for our detailed cases, whether the Partner wants to ensure an automobile, house, cyber liability, or prizes.
+###### As the name implies, if partner is of type organizational then it may have many member or staff and those staff members might be treated differently when it comes to entities/assets they are insuring. Contract: to make an agreement with Partners(our clients) we use contracts as a wrapper for our detailed cases, whether the Partner wants to ensure an automobile, house, cyber liability, or prizes.
 
 #### ContractDefinition: 
-Contract can have many contract definitions and contract definitions are probably the core part which makes this solution proposal along with InsurancePolicies. Because a single contract definition contains insurance policies apllied for atomic part of contract that defines a policy related to partner members and entity/asset assigned to it.
+###### Contract can have many contract definitions and contract definitions are probably the core part which makes this solution proposal along with InsurancePolicies. Because a single contract definition contains insurance policies apllied for atomic part of contract that defines a policy related to partner members and entity/asset assigned to it.
 
 #### ContractDefinitionUploadedDocument: 
-This is where we save documents provided by client/partner, depending on documents definitions from InsuranceTypeComplianceDocument model. 
+###### This is where we save documents provided by client/partner, depending on documents definitions from InsuranceTypeComplianceDocument model. 
 
 #### ContractStatus: 
-Contract will have a lifecycle described in statuses. For example, initially a contract can be defined as opportunity or initial, then throughout time will change into processing state, confirmed, active, or even canceled state/status.
+###### Contract will have a lifecycle described in statuses. For example, initially a contract can be defined as opportunity or initial, then throughout time will change into processing state, confirmed, active, or even canceled state/status.
 
 #### ContractExpense: 
-This can be applied to medical type of insurances where client/partnermember can declare expenses that will be covered by insurance according to ContractDefinition and InsurancePolicy.
+###### This can be applied to medical type of insurances where client/partnermember can declare expenses that will be covered by insurance according to ContractDefinition and InsurancePolicy.
 
 #### ContractExpenseDocument: 
-When client/partner declares expenses that should be covered by insurance contract it needs to provide documents as a proof.
+###### When client/partner declares expenses that should be covered by insurance contract it needs to provide documents as a proof.
 
 #### InsurancePolicies: 
-There are template insurancepolicies and those defined specifically whenever a contract definition is added to contract. Insurance policy is bound to every contract definition, meaning that contract can contain muliple insurance policies alonside contract definitions.
+###### There are template insurancepolicies and those defined specifically whenever a contract definition is added to contract. Insurance policy is bound to every contract definition, meaning that contract can contain muliple insurance policies alonside contract definitions.
 
 #### InsurancePolicyAttribute: 
-Just as the name implies, an insurance policy can have multiple attributes that can further extend an insurance policy.
+###### Just as the name implies, an insurance policy can have multiple attributes that can further extend an insurance policy.
 
 #### InsuranceMetaType: 
-Insurance meta types define a "static" meta types that when combined with InsuranceTypes can more precisely describe rules applied to insurance policies. Example: Life Insurance or Personal Insurance, Property Insurance, Marine Insurance, Fire Insurance, Liability Insurance, Guarantee Insurance, Social Insurance.
+###### Insurance meta types define a "static" meta types that when combined with InsuranceTypes can more precisely describe rules applied to insurance policies. Example: Life Insurance or Personal Insurance, Property Insurance, Marine Insurance, Fire Insurance, Liability Insurance, Guarantee Insurance, Social Insurance.
 
 #### InsuranceType: 
-Extended definitions for InsuranceMetaTypes, for example, a Property Insurance can be an automobile, house, or any asset related to organisation or individual.
+###### Extended definitions for InsuranceMetaTypes, for example, a Property Insurance can be an automobile, house, or any asset related to organisation or individual.
 
 #### InsuranceTypeComplianceDocument: 
-Definitions for documents that are required in order for ContractDefinitions to be valid.
+###### Definitions for documents that are required in order for ContractDefinitions to be valid.
 
 
 Visual representation of models in this solution (generated by python-graphviz, context named "et" which refers to models.py in this solution)
