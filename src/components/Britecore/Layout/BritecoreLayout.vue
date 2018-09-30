@@ -13,6 +13,10 @@
 
       </dashboard-content>
 
+      <britecore-content @click.native="toggleSidebar">
+
+      </britecore-content>
+
       <content-footer></content-footer>
     </div>
   </div>
