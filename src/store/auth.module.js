@@ -27,6 +27,7 @@ const actions = {
         .then(({data}) => {
           context.commit(SET_AUTH, data.token)
           resolve(data)
+          router.push({ name: 'Contracts' })
         })
         .catch(({response}) => {
           context.commit(SET_ERROR, response.data.errors)
@@ -60,11 +61,19 @@ const actions = {
         })
         .catch(({response}) => {
           context.commit(SET_ERROR, response.data.errors)
-          router.push({ name: 'Login' })
+          //if(router.history.pending.name != 'Login' || router.history.pending.name != 'Register')
+          //{
+            console.log('Please login')
+            router.push({ name: 'Login' })
+          //}
         })
     } else {
       context.commit(PURGE_AUTH)
-      //Router.push({ name: 'Login' })
+      if(router.history.pending.name != 'Login' && router.history.pending.name != 'Register')
+      {
+        console.log('Please login')
+        router.push({ name: 'Login' })
+      }
     }
   },
   [UPDATE_USER] (context, payload) {

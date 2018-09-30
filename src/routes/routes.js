@@ -40,17 +40,17 @@ const routes = [
       
 	    {
         path: 'stats',
-        name: 'stats',
+        name: 'Stats',
         component: UserProfile
       },  
       {
         path: 'contracts',
-        name: 'contracts',
+        name: 'Contracts',
         component: Contracts
       },   
       {
         path: 'partners',
-        name: 'partners',
+        name: 'Partners',
         component: Partners
       }
     ]
