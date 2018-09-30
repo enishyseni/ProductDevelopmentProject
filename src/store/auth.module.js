@@ -2,6 +2,7 @@ import ApiService from '@/common/api.service'
 import JwtService from '@/common/jwt.service'
 import { LOGIN, LOGOUT, REGISTER, CHECK_AUTH, UPDATE_USER } from './actions.type'
 import { SET_AUTH, PURGE_AUTH, SET_ERROR } from './mutations.type'
+import router from '../router'
 
 const state = {
   errors: null,
@@ -22,9 +23,9 @@ const actions = {
   [LOGIN] (context, credentials) {
     return new Promise((resolve) => {
       ApiService
-        .post('users/login', {user: credentials})
+        .post('api-token-auth/', {username: credentials.username, password: credentials.password})
         .then(({data}) => {
-          context.commit(SET_AUTH, data.user)
+          context.commit(SET_AUTH, data.token)
           resolve(data)
         })
         .catch(({response}) => {
@@ -35,12 +36,13 @@ const actions = {
   [LOGOUT] (context) {
     context.commit(PURGE_AUTH)
   },
-  [REGISTER] (context, credentials) {
+  [REGISTER] (context, model) {
     return new Promise((resolve, reject) => {
       ApiService
-        .post('users', {user: credentials})
+        .post('users/register/', {username: model.username, email: model.email, password: model.password})
         .then(({data}) => {
-          context.commit(SET_AUTH, data.user)
+          //context.commit(SET_AUTH, data.user)
+          context.commit(LOGIN, data)
           resolve(data)
         })
         .catch(({response}) => {
@@ -52,15 +54,17 @@ const actions = {
     if (JwtService.getToken()) {
       ApiService.setHeader()
       ApiService
-        .get('user')
+        .post('api-token-verify/', {token: JwtService.getToken()})
         .then(({data}) => {
-          context.commit(SET_AUTH, data.user)
+          context.commit(SET_AUTH, data.token)
         })
         .catch(({response}) => {
           context.commit(SET_ERROR, response.data.errors)
+          router.push({ name: 'Login' })
         })
     } else {
       context.commit(PURGE_AUTH)
+      //Router.push({ name: 'Login' })
     }
   },
   [UPDATE_USER] (context, payload) {
@@ -88,11 +92,11 @@ const mutations = {
   [SET_ERROR] (state, error) {
     state.errors = error
   },
-  [SET_AUTH] (state, user) {
+  [SET_AUTH] (state, token) {
     state.isAuthenticated = true
-    state.user = user
+    state.user = {}
     state.errors = {}
-    JwtService.saveToken(state.user.token)
+    JwtService.saveToken(token)
   },
   [PURGE_AUTH] (state) {
     state.isAuthenticated = false

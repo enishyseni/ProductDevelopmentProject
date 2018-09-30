@@ -8,95 +8,32 @@
         <div class="row">
           <div class="col-md-5">
             <fg-input type="text"
-                      label="Company"
+                      label="Partner Type"
                       :disabled="true"
-                      placeholder="Paper dashboard"
-                      v-model="user.company">
+                      placeholder="Partner type id"
+                      v-model="partner.PartnerType">
             </fg-input>
           </div>
           <div class="col-md-3">
 
             <fg-input type="text"
-                      label="Username"
-                      placeholder="Username"
-                      v-model="user.username">
+                      label="Name"
+                      placeholder="Name"
+                      v-model="partner.OrganisationName">
             </fg-input>
           </div>
           <div class="col-md-4">
             <fg-input type="email"
                       label="Username"
                       placeholder="Email"
-                      v-model="user.email">
+                      v-model="partner.OrganisationDescription">
             </fg-input>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <fg-input type="text"
-                      label="First Name"
-                      placeholder="First Name"
-                      v-model="user.firstName">
-            </fg-input>
-          </div>
-          <div class="col-md-6">
-            <fg-input type="text"
-                      label="Last Name"
-                      placeholder="Last Name"
-                      v-model="user.lastName">
-            </fg-input>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-12">
-            <fg-input type="text"
-                      label="Address"
-                      placeholder="Home Address"
-                      v-model="user.address">
-            </fg-input>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            <fg-input type="text"
-                      label="City"
-                      placeholder="City"
-                      v-model="user.city">
-            </fg-input>
-          </div>
-          <div class="col-md-4">
-            <fg-input type="text"
-                      label="Country"
-                      placeholder="Country"
-                      v-model="user.country">
-            </fg-input>
-          </div>
-          <div class="col-md-4">
-            <fg-input type="number"
-                      label="Postal Code"
-                      placeholder="ZIP Code"
-                      v-model="user.postalCode">
-            </fg-input>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-12">
-            <div class="form-group">
-              <label>About Me</label>
-              <textarea rows="5" class="form-control border-input"
-                        placeholder="Here can be your description"
-                        v-model="user.aboutMe">
-
-              </textarea>
-            </div>
-          </div>
-        </div>
+       
         <div class="text-center">
-          <button type="submit" class="btn btn-info btn-fill btn-wd" @click.prevent="updateProfile">
-            Update Profile
+          <button type="submit" class="btn btn-info btn-fill btn-wd" @click.prevent="addPartner">
+            Add Partner
           </button>
         </div>
         <div class="clearfix"></div>
@@ -105,10 +42,11 @@
   </div>
 </template>
 <script>
-  export default {
+  import PartnerService from '../../../../../common/api.service'
+  export default {    
     data () {
       return {
-        user: {
+        partner: {
           company: 'Paper Dashboard',
           username: 'michael23',
           email: '',
@@ -121,8 +59,8 @@
       }
     },
     methods: {
-      updateProfile () {
-        alert('Your data: ' + JSON.stringify(this.user))
+      addPartner () {
+        alert('Your data: ' + JSON.stringify(this.partner))
       }
     }
   }

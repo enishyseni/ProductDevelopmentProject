@@ -3,8 +3,8 @@
 import Vue from 'vue'
 
 
-
-import VueRouter from 'vue-router'
+import router from './router'
+//import VueRouter from 'vue-router'
 import vClickOutside from 'v-click-outside'
 
 // Plugins
@@ -26,7 +26,7 @@ import 'es6-promise/auto'
 
 //import router from '@/router'
 import store from '@/store'
-import { CHECK_AUTH } from '@/store/actions.type'
+//import { CHECK_AUTH } from '@/store/actions.type'
 
 import ApiService from '@/common/api.service'
 import DateFilter from '@/common/date.filter'
@@ -36,17 +36,17 @@ import ErrorFilter from '@/common/error.filter'
 
 
 // plugin setup
-Vue.use(VueRouter)
+//Vue.use(VueRouter)
 Vue.use(GlobalComponents)
 Vue.use(vClickOutside)
 Vue.use(Notifications)
 Vue.use(SideBar)
 
 // configure router
-const router = new VueRouter({
-  routes, // short for routes: routes
-  linkActiveClass: 'active'
-})
+//const router = new VueRouter({
+//  routes, // short for routes: routes
+//  linkActiveClass: 'active'
+//})
 
 
 
@@ -59,13 +59,22 @@ Vue.filter('error', ErrorFilter)
 ApiService.init()
 
 // Ensure we checked auth before each page load.
-router.beforeEach(
-  (to, from, next) => {
-    return Promise
-      .all([store.dispatch(CHECK_AUTH)])
-      .then(next)
-  }
-)
+// router.beforeEach(
+//   (to, from, next) => {
+//     if(!to.matched.some(record => record.meta.guest))
+//     {
+//       return Promise
+//         .all([store.dispatch(CHECK_AUTH)])
+//         .then(next)
+//     }
+//     else{
+//       if(!localStorage.getItem('jwt') == null)
+//       {
+//         next({ name: 'contracts'})
+//       }
+//     }
+//   }
+// )
 
 /* eslint-disable no-new */
 new Vue({

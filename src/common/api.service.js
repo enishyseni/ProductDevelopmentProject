@@ -54,6 +54,42 @@ const ApiService = {
 
 export default ApiService
 
+
+
+
+
+
+
+export const PartnerService = {
+  query (type, params) {
+    return ApiService
+      .query(
+        'articles' + (type === 'feed' ? '/feed' : ''),
+        { params: params }
+      )
+  },
+  get (id) {
+    return ApiService.get('partner', id)
+  },
+  create (params) {
+    return ApiService.post('newpartner', {partner: params})
+  },
+  update (params) {
+    return ApiService.update('articles', {partner: params})
+  },
+  delete (slug) {
+    return ApiService.delete('deletepartner')
+  }
+}
+
+
+
+
+
+
+
+
+
 export const TagsService = {
   get () {
     return ApiService.get('tags')
