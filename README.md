@@ -97,6 +97,7 @@ Download and install Python (2.7)
 Install PIP:
 python -m pip install -U pip
 pip install -r requirements.txt
+npm install
 
 Start example by:
 python manage.py runserver
