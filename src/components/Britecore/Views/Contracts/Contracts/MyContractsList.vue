@@ -1,130 +1,73 @@
 <template>
-  <div class="card">
+  <div class="row">
+<div class="col-md-6 col-xs-12">
+  <div class="card" style="cursor: pointer;">
     <div class="header">
-      <h4 class="title">Edit Profile</h4>
+      <h4 class="title">Contract z</h4>
     </div>
-    <div class="content">
-      <form>
-        <div class="row">
-          <div class="col-md-5">
-            <fg-input type="text"
-                      label="Company"
-                      :disabled="true"
-                      placeholder="Paper dashboard"
-                      v-model="user.company">
-            </fg-input>
-          </div>
-          <div class="col-md-3">
 
-            <fg-input type="text"
-                      label="Username"
-                      placeholder="Username"
-                      v-model="user.username">
-            </fg-input>
-          </div>
-          <div class="col-md-4">
-            <fg-input type="email"
-                      label="Username"
-                      placeholder="Email"
-                      v-model="user.email">
-            </fg-input>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <fg-input type="text"
-                      label="First Name"
-                      placeholder="First Name"
-                      v-model="user.firstName">
-            </fg-input>
-          </div>
-          <div class="col-md-6">
-            <fg-input type="text"
-                      label="Last Name"
-                      placeholder="Last Name"
-                      v-model="user.lastName">
-            </fg-input>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-12">
-            <fg-input type="text"
-                      label="Address"
-                      placeholder="Home Address"
-                      v-model="user.address">
-            </fg-input>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            <fg-input type="text"
-                      label="City"
-                      placeholder="City"
-                      v-model="user.city">
-            </fg-input>
-          </div>
-          <div class="col-md-4">
-            <fg-input type="text"
-                      label="Country"
-                      placeholder="Country"
-                      v-model="user.country">
-            </fg-input>
-          </div>
-          <div class="col-md-4">
-            <fg-input type="number"
-                      label="Postal Code"
-                      placeholder="ZIP Code"
-                      v-model="user.postalCode">
-            </fg-input>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-12">
-            <div class="form-group">
-              <label>About Me</label>
-              <textarea rows="5" class="form-control border-input"
-                        placeholder="Here can be your description"
-                        v-model="user.aboutMe">
-
-              </textarea>
-            </div>
-          </div>
-        </div>
-        <div class="text-center">
-          <button type="submit" class="btn btn-info btn-fill btn-wd" @click.prevent="updateProfile">
-            Update Profile
-          </button>
-        </div>
-        <div class="clearfix"></div>
-      </form>
+    <div class="card-body"><div><p class="description text-center">
+      Contract z ccccccccccccccc ddddddddddddddd
+    </p></div><hr><div class="text-center"><div class="row"><div class="col-lg-3 offset-lg-1"><h5>3
+          <br><small>Definitions</small></h5></div><div class="col-lg-3"><h5>0
+          <br><small>Documents</small></h5></div><div class="col-lg-4"><h5>Opportunity
+          <br><small>Status</small></h5></div></div></div></div>   
+    
     </div>
+
+<div class="card" style="cursor: pointer;">
+    <div class="header">
+      <h4 class="title">Contract x</h4>
+    </div>
+
+    <div class="card-body"><div><p class="description text-center">
+      Contract x aaaaaaaaaaaaa bbbbbbbbbbbbb
+    </p></div><hr><div class="text-center"><div class="row"><div class="col-lg-3 offset-lg-1"><h5>9
+          <br><small>Definitions</small></h5></div><div class="col-lg-3"><h5>14
+          <br><small>Documents</small></h5></div><div class="col-lg-4"><h5>Processing
+          <br><small>Status</small></h5></div></div></div></div>   
+    
+    </div>
+
+    <div class="card" style="cursor: pointer;">
+    <div class="header">
+      <h4 class="title">Contract y</h4>
+    </div>
+
+    <div class="card-body"><div><p class="description text-center">
+      Contract y zzz xxx yyyContract x zzz xxx yyyContract x zzz xxx yyyContract x zzz xxx yyyContract x zzz xxx yyyContract x zzz xxx yyy
+    </p></div><hr><div class="text-center"><div class="row"><div class="col-lg-3 offset-lg-1"><h5>6
+          <br><small>Definitions</small></h5></div><div class="col-lg-3"><h5>4
+          <br><small>Documents</small></h5></div><div class="col-lg-4"><h5>Initial
+          <br><small>Status</small></h5></div></div></div></div>   
+    
+    </div>
+
+
   </div>
+
+  
+
+<div class="col-md-6 col-xs-12">
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8 col-md-offset-2"><h3>Click a contract to view details.</h3></div>
+  </div>
+</div>
+
+
+
+</div>
 </template>
 <script>
   export default {
     data () {
       return {
-        user: {
-          company: 'Paper Dashboard',
-          username: 'michael23',
-          email: '',
-          lastName: 'Faker',
-          address: 'Melbourne, Australia',
-          city: 'melbourne',
-          postalCode: '',
-          aboutMe: `Oh so, your weak rhyme. You doubt I'll bother, reading into it.I'll probably won't, left to my own devicesBut that's the difference in our opinions.`
-        }
+        collection: {}
       }
     },
     methods: {
-      updateProfile () {
-        alert('Your data: ' + JSON.stringify(this.user))
-      }
-    }
+      
+      }    
   }
 
 </script>

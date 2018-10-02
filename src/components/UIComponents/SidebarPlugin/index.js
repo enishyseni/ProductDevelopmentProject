@@ -35,7 +35,7 @@ const SidebarStore = {
     },
     {
       path: '/insurance/newcontract',
-      icon: 'ti-panel',
+      icon: 'ti-view-list-alt',
       name: 'New Contract'
     }, 
     {
@@ -45,7 +45,7 @@ const SidebarStore = {
     },  
     {
       path: '/insurance/newcontractexpense',
-      icon: 'ti-panel',
+      icon: 'ti-view-list-alt',
       name: 'New Contract Expense'
     }, 
     {
@@ -55,7 +55,7 @@ const SidebarStore = {
     }, 
     {
       path: '/insurance/newcontractdefinition',
-      icon: 'ti-panel',
+      icon: 'ti-view-list-alt',
       name: 'New Contract Definition'
     }, 
     {
@@ -65,7 +65,7 @@ const SidebarStore = {
     }, 
     {
       path: '/insurance/newcontractdocument',
-      icon: 'ti-panel',
+      icon: 'ti-view-list-alt',
       name: 'New Contract Document'
     },
     {

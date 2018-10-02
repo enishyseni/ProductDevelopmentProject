@@ -146,7 +146,7 @@ class ContractStatus(models.Model):
     DeletedBy = models.CharField(max_length=200)
     
 class InsurancePolicyAttribute(models.Model):
-    InsurancePolicy = models.ForeignKey(InsurancePolicy);
+    InsurancePolicy = models.ForeignKey(InsurancePolicy)
     Description = models.CharField(max_length=800)
     Name = models.CharField(max_length=200)
     ExtraAmount = models.CharField(max_length=500)

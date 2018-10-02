@@ -10,7 +10,7 @@ I have read and asked a bit about how insurance companies work, and a bit of per
 
 ### Platform design concept
 
-I started with a simplified process flow in my mind, meaning the first thing you encounter with insurance company is identification, to whom i might be an organisation or individual which therefore i called it Partner in the solution. Since this solution was created to demonstrate solution aproach through Python/Django/VueJS stack it therefore lacks business logic, because to make it fully functional it would require most likely another month or two to finish it.
+I started with a simplified process flow in my mind, meaning the first thing you encounter with insurance company is identification, to whom i might be an organisation or individual which therefore i called it Partner in the solution. Since this was created to demonstrate solution giving aproach through Python/Django/VueJS stack it therefore lacks business logic, because to make it fully functional it would require most likely another month or two to finish it.
 
 #### Partner: 
 ###### It's where we save basic data about the client/partner.
