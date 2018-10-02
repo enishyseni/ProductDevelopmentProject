@@ -92,19 +92,18 @@ Before every action JWT token is validated. If expired it then redirects you to 
 
 ```
 How to run the example:
-Download and install Python (2.7)
+Download and install Python (2.7):
 
 Install PIP:
 python -m pip install -U pip
 pip install -r requirements.txt
+
+Download and install Node:
 npm install
+npm run build
 
 Start example by:
 python manage.py runserver
-
-Optional - to create webpack build of VueJS client:
-Download and install Node
-npm run build
 
 Note:
 Theres already data in database with superuser created but use the register form to create new account.
