@@ -1,8 +1,8 @@
 import BritecoreLayout from '../components/Britecore/Layout/BritecoreLayout.vue'
 // GeneralViews
 import NotFound from '../components/GeneralViews/NotFoundPage.vue'
-import Login from '../Views/Login.vue'
-import Register from '../Views/Register.vue'
+import Login from '../components/Britecore/Views/Login.vue'
+import Register from '../components/Britecore/Views/Register.vue'
 import UserProfile from '../components/Britecore/Views/UserProfile.vue'
 
 // BriteCore pages
