@@ -55,17 +55,15 @@ const actions = {
     if (JwtService.getToken()) {
       ApiService.setHeader()
       ApiService
-        .post('api-token-verify/', {token: JwtService.getToken()})
+        .post('api-token-verify', {token: JwtService.getToken()})
         .then(({data}) => {
           context.commit(SET_AUTH, data.token)
         })
         .catch(({response}) => {
           context.commit(SET_ERROR, response.data.errors)
-          //if(router.history.pending.name != 'Login' || router.history.pending.name != 'Register')
-          //{
-            console.log('Please login')
+          context.commit(PURGE_AUTH)
+            alert('Your login session has expired. Please login again to proceed.')
             router.push({ name: 'Login' })
-          //}
         })
     } else {
       context.commit(PURGE_AUTH)

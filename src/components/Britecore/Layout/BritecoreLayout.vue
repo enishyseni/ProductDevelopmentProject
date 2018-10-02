@@ -7,15 +7,15 @@
 
     </notifications>
     <div class="main-panel">
-      <top-navbar></top-navbar>
-
-      <dashboard-content @click.native="toggleSidebar">
-
-      </dashboard-content>
+      <top-navbar></top-navbar>     
 
       <britecore-content @click.native="toggleSidebar">
 
       </britecore-content>
+
+      <dashboard-content @click.native="toggleSidebar">
+
+      </dashboard-content>
 
       <content-footer></content-footer>
     </div>

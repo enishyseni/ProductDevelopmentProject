@@ -4,7 +4,7 @@
       <nav class="pull-left">
         <ul>
           <li>
-            <router-link :to="{path:'/admin'}">BriteCore</router-link>
+            <router-link :to="{path:'/insurances'}">BriteCore</router-link>
           </li>
         </ul>
       </nav>

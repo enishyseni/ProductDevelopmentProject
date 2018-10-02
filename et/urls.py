@@ -24,7 +24,15 @@ urlpatterns = [
     url(r'^users/register', views.create_auth),
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home),
-    url(r'^partnertype/', views.partnertype),
+    
+    url(r'^partnertypes/', views.partnertypes),
+    url(r'^partnertype/(?P<id>[0-9]+)$', views.partnertype),
+    url(r'^newpartnertype/', views.newpartnertype),
+
+    url(r'^partners/', views.partners),
+    url(r'^partner/(?P<id>[0-9]+)$', views.partner),
+    url(r'^newpartner/', views.newpartner),
+
     url(r'^entityassettype/', views.entityassettype),
     url(r'^insurancetype/', views.insurancetype)
 ]

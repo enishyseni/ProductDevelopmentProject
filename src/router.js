@@ -20,21 +20,9 @@ const router = new VueRouter({
 
 router.beforeEach(
     (to, from, next) => {
-      //if(!to.matched.some(record => record.meta.guest))
-      //{
         return Promise
           .all([store.dispatch(CHECK_AUTH)])
           .then(next)
-      //}
-      //else{
-      //  next()
-      //}
-      //else{
-      //  if(!localStorage.getItem('jwt') == null)
-      //  {
-      //    next({ name: 'contracts'})
-      //  }
-      //}
     }
   )
 

@@ -15,14 +15,14 @@
           <li class="open">
             <a href="#" class="dropdown-toggle btn-magnify" data-toggle="dropdown">
               <i class="ti-panel"></i>
-              <p>Stats</p>
+              <p></p>
             </a>
           </li>
-             <drop-down title="5 Notifications" icon="ti-bell">
-               <li><a href="#">Notification 1</a></li>
-               <li><a href="#">Notification 2</a></li>
-               <li><a href="#">Notification 3</a></li>
-               <li><a href="#">Notification 4</a></li>
+             <drop-down title="Notifications" icon="ti-bell">
+               <li><a href="#">Example Notification 1</a></li>
+               <li><a href="#">Example Notification 2</a></li>
+               <li><a href="#">Example Notification 3</a></li>
+               <li><a href="#">Example Notification 4</a></li>
                <li><a href="#">Another notification</a></li>
              </drop-down>
           <li>

@@ -2,7 +2,7 @@
 
 ### Before we begin
 
-This solution comes from an experienced software engineer who had zero experience with insurances before, and since python and VueJS framework are not my primary technology stack, it took me a bit more time to get familiar with this stack, either way it wasn't that hard because software engineering principles are very similar in modern technology stacks.
+This solution comes from an experienced software engineer who had zero experience with insurance platforms before, and since Python/Django/VueJS is not my primary technology stack, it took me a bit more time to get familiar with this stack, either way it wasn't that hard because software engineering principles are very similar in modern technology stacks.
 
 ### The idea
 
@@ -10,7 +10,7 @@ I have read and asked a bit about how insurance companies work, and a bit of per
 
 ### Platform design concept
 
-I started with a simplified process flow in my mind, meaning the first thing you encounter with insurance company is identification, to whom i might be an organisation or individual which therefore i called it Partner in the solution.
+I started with a simplified process flow in my mind, meaning the first thing you encounter with insurance company is identification, to whom i might be an organisation or individual which therefore i called it Partner in the solution. Since this solution was created to demonstrate solution aproach through Python/Django/VueJS stack it therefore lacks business logic, because to make it fully functional it would require most likely another month or two to finish it.
 
 #### Partner: 
 ###### It's where we save basic data about the client/partner.
@@ -63,6 +63,32 @@ To this point we talked about backend engine on django and the way it handles da
 When it comes to Frontend, I’ve used a free “admin theme” made on VueJS and changed the navigation on router and components to give the idea on how i would organize a frontend engine. One thing that you can notice on components are simple layout for every model that contains 2 file, one that lists records from that model and one that inserts new record on that model.
 
 I had a bit of a struggle when integrating Webpack with Django through "webpack-stats.json" because of the configuration and folder structure that needed to be changed, thats why the main project folder looks like it contains many files and folders since i had to put VueJS and Django in the same folder. This could have been done the other way but it would take a little bit more time to configure Webpack to target files into specific folders. 
+
+There is api.service.js which handles all data exchange between client and server. It uses Vue Axios for simplification of data exhchange. On every request JWT token is injected for authentification on Django endpoints.
+
+### Screenshots
+
+Register view component
+![img](register.jpg)
+
+Login view component
+![img](login.jpg)
+
+Form example (working example)
+![img](newpartnertype.jpg)
+
+Listing example (working example)
+![img](partnertypes.jpg)
+
+Mockup example of contracts (HTML/CSS only. Not functional because of many constrains in models)
+![img](newcontract.jpg)
+
+Mockup example of contracts list (HTML/CSS only. Not functional because of many constrains in models)
+![img](contracts.jpg)
+
+Before every action JWT token is validated. If expired it then redirects you to login screen.
+![img](jwtcheck.jpg)
+
 
 ```
 How to run the example:
