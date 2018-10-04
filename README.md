@@ -93,7 +93,7 @@ Attributes:
             4. Risk type c
             5. Risk type g
 
-From the examples above we say that whenever we will make a contract with a customer that wants to insure a car and a house there will be 8 risks involved.
+From the examples we see that the contract with customer that wants to insure a car and a house will have 8 risks involved.
 
 ### What does this proposal covers so far?
 
