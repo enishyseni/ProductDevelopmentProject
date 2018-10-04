@@ -103,7 +103,7 @@ From the examples above we say that whenever we will make a contract with a cust
 4. Documents that are required by the contract and risks involved
 5. After Contract becomes active we can continue to attach expenses to this contract from the first day of it's effectivness untill the end of contract.
 
-### How this idea will in a step by step scenario? House insurance example:
+### How this idea will work in a real step by step scenario? House insurance example:
 
 1. We register a customer as a private or company. In this case it's a private so it will have one member which is going to be the owner of house itself.
 2. We prepare contract definitions.
