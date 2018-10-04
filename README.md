@@ -66,6 +66,51 @@ I had a bit of a struggle when integrating Webpack with Django through "webpack-
 
 There is api.service.js which handles all data exchange between client and server. It uses Vue Axios for simplification of data exhchange. On every request JWT token is injected for authentification on Django endpoints.
 
+### What we achieve by this solution?
+
+This data model allows us to make a system that when a customer wants to insure their car or house or prize, we can prepare a contract for him/her.
+
+But first, in order to prepare a contract and do business with clients we will be predefining risk types in our system outside of contract context. Meaning long before contracts start to appear in our system, we will have risk types predefined so they are ready to be used whenever a contract is about to happen.
+
+### How we define risk types in the system?
+
+Risk types are defined in InsurancePolicies table. An InsurancePolicy will contain many attributes that we can call risk types definition. Example:
+Let's say we want to define template InsurancePolicies about cars and houses:
+
+Insurance Policy x: 
+Name - CAR
+Attributes:
+            1. Risk type x
+            2. Risk type y
+            3. Risk type z
+
+Insurance Policy x: 
+Name - HOUSE
+Attributes:
+            1. Risk type x
+            2. Risk type a
+            3. Risk type b
+            4. Risk type c
+            5. Risk type g
+
+From the examples above we say that whenever we will make a contract with a customer that wants to insure a car and a house there will be 8 risks involved.
+
+### What does this proposal covers so far?
+
+1. Parties involved.
+2. Contract definitions that define risk types through insurance policies.
+3. InsurancyPolicy can contain many risk types definitions ion a form of attributes attached to a policy that can be used to attach them to entities or assets like automobiles, houses, or prizes on any ContractDefinition.
+4. Documents that are required by the contract and risks involved
+5. After Contract becomes active we can continue to attach expenses to this contract from the first day of it's effectivness untill the end of contract.
+
+### How this idea will in a step by step scenario? House insurance example:
+
+1. We register a customer as a private or company. In this case it's a private so it will have one member which is going to be the owner of house itself.
+2. We prepare contract definitions.
+3. By preparing contract definition we attach insurance policies that contain one or many predefined risktypes. In this case the contract definition will contain an InsurancePolicy defining risk types about house insurance. One contract definition is enough in this case to cover all the risks.
+4. We define documents that the customer needs to present in order for the contract to be valid.
+5. After all documents provided, whatever happens in contract period, if for example there was a risk involved that led to house being burned by accident, then we register expenses in ContractExpenses that BriteCore had to cover/pay the client.
+
 ### Screenshots
 
 Register view component
@@ -81,7 +126,7 @@ Listing example (working example)
 ![img](partnertypes.jpg)
 
 Mockup example of contracts (HTML/CSS only. Not functional because of many constrains in models)
-![img](newcontract.jpg)
+![img](newvontractdescription.jpg)
 
 Mockup example of contracts list (HTML/CSS only. Not functional because of many constrains in models)
 ![img](contracts.jpg)
