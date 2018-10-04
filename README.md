@@ -126,7 +126,7 @@ Listing example (working example)
 ![img](partnertypes.jpg)
 
 Mockup example of contracts (HTML/CSS only. Not functional because of many constrains in models)
-![img](newvontractdescription.jpg)
+![img](newcontractdescription.jpg)
 
 Mockup example of contracts list (HTML/CSS only. Not functional because of many constrains in models)
 ![img](contracts.jpg)
