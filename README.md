@@ -153,9 +153,9 @@ python manage.py runserver
 Navigate to http://localhost:8000
 
 DOCKER VERSION:
-docker pull nikolaik/python-nodejs:latest
+docker pull python:2.7.15
 docker build -t testproject .
-docker run -p 8000:8000 testproject
+docker run -it -d -p 8000:8000 testproject
 
 Note:
 Theres already data in database with superuser created but use the register form to create new account.
