@@ -157,6 +157,9 @@ docker pull python:2.7.15
 docker build -t testproject .
 docker run -it -d -p 8000:8000 testproject
 
+Deployed version (Azure):
+http://britecoreproposal.northeurope.azurecontainer.io:8000
+
 Note:
 Theres already data in database with superuser created but use the register form to create new account.
 ```
