@@ -157,7 +157,10 @@ docker pull python:2.7.15
 docker build -t testproject .
 docker run -it -d -p 8000:8000 testproject
 
-Deployed version (Azure):
+Deployed demo version (AWS ECS/AWS Fargate):
+http://ec2co-ecsel-u4o9qy70rath-630846152.us-east-1.elb.amazonaws.com:8000
+
+Deployed demo version (Azure):
 http://britecoreproposal.northeurope.azurecontainer.io:8000
 
 Note:
